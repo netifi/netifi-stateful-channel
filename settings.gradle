@@ -1,0 +1,5 @@
+rootProject.name = 'proteus-stateful-channels'
+include 'client'
+include 'service'
+include 'service-idl'
+
