@@ -15,6 +15,26 @@ public final class ServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_Add_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_Add_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_Sub_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_Sub_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_netifi_proteus_quickstart_service_ReadTransactedResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_netifi_proteus_quickstart_service_ReadTransactedResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_netifi_proteus_quickstart_service_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -35,14 +55,27 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n;io/netifi/proteus/quickstart/service/p" +
       "rotobuf/service.proto\022$io.netifi.proteus" +
-      ".quickstart.service\"\031\n\007Request\022\016\n\006number" +
-      "\030\001 \001(\005\"\031\n\010Response\022\r\n\005total\030\002 \001(\t2\220\001\n\026St" +
-      "atefulChannelService\022v\n\017StatefulChannel\022" +
-      "-.io.netifi.proteus.quickstart.service.R" +
-      "equest\032..io.netifi.proteus.quickstart.se" +
-      "rvice.Response\"\000(\0010\001B?\n-io.netifi.proteu" +
-      "s.quickstart.service.protobufB\014ServicePr" +
-      "otoP\001b\006proto3"
+      ".quickstart.service\032\033google/protobuf/emp" +
+      "ty.proto\"\341\001\n\021TransactedRequest\022J\n\003add\030\001 " +
+      "\001(\0132;.io.netifi.proteus.quickstart.servi" +
+      "ce.TransactedRequest.AddH\000\022J\n\003sub\030\002 \001(\0132" +
+      ";.io.netifi.proteus.quickstart.service.T" +
+      "ransactedRequest.SubH\000\032\024\n\003Add\022\r\n\005delta\030\001" +
+      " \001(\005\032\024\n\003Sub\022\r\n\005delta\030\001 \001(\005B\010\n\006action\"\'\n\026" +
+      "ReadTransactedResponse\022\r\n\005value\030\001 \001(\005\"\031\n" +
+      "\007Request\022\016\n\006number\030\001 \001(\005\"\031\n\010Response\022\r\n\005" +
+      "total\030\002 \001(\t2\220\001\n\026StatefulChannelService\022v" +
+      "\n\017StatefulChannel\022-.io.netifi.proteus.qu" +
+      "ickstart.service.Request\032..io.netifi.pro" +
+      "teus.quickstart.service.Response\"\000(\0010\0012\356" +
+      "\001\n\030TransactedChannelService\022h\n\021Transacte" +
+      "dChannel\0227.io.netifi.proteus.quickstart." +
+      "service.TransactedRequest\032\026.google.proto" +
+      "buf.Empty\"\000(\001\022h\n\016ReadTransacted\022\026.google" +
+      ".protobuf.Empty\032<.io.netifi.proteus.quic" +
+      "kstart.service.ReadTransactedResponse\"\000B" +
+      "?\n-io.netifi.proteus.quickstart.service." +
+      "protobufB\014ServiceProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -55,19 +88,45 @@ public final class ServiceProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.EmptyProto.getDescriptor(),
         }, assigner);
-    internal_static_io_netifi_proteus_quickstart_service_Request_descriptor =
+    internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_descriptor,
+        new java.lang.String[] { "Add", "Sub", "Action", });
+    internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_Add_descriptor =
+      internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_descriptor.getNestedTypes().get(0);
+    internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_Add_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_Add_descriptor,
+        new java.lang.String[] { "Delta", });
+    internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_Sub_descriptor =
+      internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_descriptor.getNestedTypes().get(1);
+    internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_Sub_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_netifi_proteus_quickstart_service_TransactedRequest_Sub_descriptor,
+        new java.lang.String[] { "Delta", });
+    internal_static_io_netifi_proteus_quickstart_service_ReadTransactedResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_io_netifi_proteus_quickstart_service_ReadTransactedResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_netifi_proteus_quickstart_service_ReadTransactedResponse_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_io_netifi_proteus_quickstart_service_Request_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_io_netifi_proteus_quickstart_service_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_netifi_proteus_quickstart_service_Request_descriptor,
         new java.lang.String[] { "Number", });
     internal_static_io_netifi_proteus_quickstart_service_Response_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_io_netifi_proteus_quickstart_service_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_netifi_proteus_quickstart_service_Response_descriptor,
         new java.lang.String[] { "Total", });
+    com.google.protobuf.EmptyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

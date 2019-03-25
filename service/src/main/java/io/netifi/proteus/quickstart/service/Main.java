@@ -2,6 +2,7 @@ package io.netifi.proteus.quickstart.service;
 
 import io.netifi.proteus.Proteus;
 import io.netifi.proteus.quickstart.service.protobuf.StatefulChannelServiceServer;
+import io.netifi.proteus.quickstart.service.protobuf.TransactedChannelServiceServer;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -27,6 +28,7 @@ public class Main {
     
     // Add Service to Respond to Requests
     netifi.addService(new StatefulChannelServiceServer(new DefaultStatefulChannelService(), Optional.empty(), Optional.empty()));
+    netifi.addService(new TransactedChannelServiceServer(new DefaultTransactedChannelService(), Optional.empty(), Optional.empty()));
     
     // Connect to Netifi Proteus Platform
     netifi.group("quickstart.services.helloservices");

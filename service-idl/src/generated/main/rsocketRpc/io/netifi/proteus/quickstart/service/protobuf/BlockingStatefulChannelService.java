@@ -10,9 +10,6 @@ public interface BlockingStatefulChannelService {
   String METHOD_STATEFUL_CHANNEL = "StatefulChannel";
 
   /**
-   * <pre>
-   * Returns a Hello World Message
-   * </pre>
    */
   Iterable<io.netifi.proteus.quickstart.service.protobuf.Response> statefulChannel(Iterable<io.netifi.proteus.quickstart.service.protobuf.Request> messages, io.netty.buffer.ByteBuf metadata);
 }

@@ -2,14 +2,41 @@ syntax = "proto3";
 
 package io.netifi.proteus.quickstart.service;
 
+import "google/protobuf/empty.proto";
+
 option java_package = "io.netifi.proteus.quickstart.service.protobuf";
 option java_outer_classname = "ServiceProto";
 option java_multiple_files = true;
 
-service StatefulChannelService {
 
-    // Returns a Hello World Message
+service StatefulChannelService {
     rpc StatefulChannel (stream Request) returns (stream Response) {}
+}
+
+
+service TransactedChannelService {
+  rpc TransactedChannel (stream TransactedRequest) returns (google.protobuf.Empty) {}
+
+  rpc ReadTransacted (google.protobuf.Empty) returns (ReadTransactedResponse) {}
+}
+
+message TransactedRequest {
+  message Add {
+    int32 delta =  1;
+  }
+
+  message Sub {
+    int32 delta = 1;
+  }
+
+  oneof action {
+    Add add = 1;
+    Sub sub = 2;
+  }
+}
+
+message ReadTransactedResponse {
+  int32 value = 1;
 }
 
 message Request {
